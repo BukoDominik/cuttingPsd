@@ -1,0 +1,22 @@
+@import "bg";
+@import "header";
+@import "aboutUs";
+@import "services";
+@import "gallery";
+@import "blog";
+@import "subscribe";
+@import "footer";
+@import "modal";
+@import "hambMenu";
+body {
+	font-family: 'Raleway', sans-serif;
+	padding: 0px;
+	margin: 0;
+}
+$xs: 480px;
+$s: 575px;
+$m: 769px;
+$l: 992px;
+$xl: 1200px;
+
+

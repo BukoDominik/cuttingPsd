@@ -1,0 +1,77 @@
+.services {
+  overflow: hidden;
+  width: 78%;
+  margin: 0 auto;
+  @at-root #{&}__bttns {
+    padding: 160px 0 0 100px;
+    width: 400px;
+    float: left;
+    padding-bottom: 150px;
+    @media (max-width: $l) {
+      margin: 0 auto;
+      float: none;
+      padding: 20px 0 20px 0;
+    }
+    @media (max-width: $s) {
+      width: 300px;
+    }
+  }
+  @at-root #{&}__item {
+    padding: 20px 0 0 0;
+  }
+  @at-root #{&}__button {
+
+    background-color: #ffffff;
+    border: hidden;
+    width: 400px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 2px 2px 20px black;
+    }
+    @media (max-width: $s) {
+      width: 300px;
+    }
+  }
+  @at-root #{&}__btnText {
+    text-align: center;
+    width: 240px;
+    padding-left: 30px;
+    padding-top: 10px;
+    @media (max-width: $s) {
+      width: auto;
+      padding-left: 0px;
+      padding-top: 0px;
+    }
+  }
+  @at-root #{&}__btnImg {
+    float: right;
+    padding-right: 20px;
+    @media (max-width: $s) {
+      display: none;
+    }
+  }
+  @at-root #{&}__ourServices {
+    overflow: visible;
+    text-align: center;
+    background: url("../img/tomato.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    float: right;
+    width: 39%;
+    height: 527px;
+    @media (max-width: $l) {
+      display: none}
+  }
+  @at-root #{&}__title {
+    margin-top: 170px;
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    float: right;
+  }
+
+}

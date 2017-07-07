@@ -1,0 +1,39 @@
+.aboutUs {
+  overflow: hidden;
+  width: 78%;
+  margin: 0 auto;
+  @at-root #{&}__img {
+    padding: 2.1% 0;
+    float:left;
+    width: 50%;
+    @media (max-width: $l) {
+      display: none;
+    }
+  }
+  @at-root #{&}__info {
+    padding: 25% 0 0 0;
+    color: white;
+    float: right;
+    width: 42%;
+    @media (max-width: $l) {
+      padding: 20px 0 20px 0;
+      float: none;
+      margin: 0 auto;
+    }
+
+  }
+  @at-root #{&}__title {
+    font-size: 90px;
+    font-weight: bold;
+    @media (max-width: $l) {
+      font-size: 45px;
+    }
+  }
+  @at-root #{&}__para {
+    font-size: 17px;
+    font-weight: 100;
+    @media (max-width: $l) {
+      font-size: 10px;
+    }
+  }
+}

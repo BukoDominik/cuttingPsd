@@ -1,0 +1,32 @@
+KONFIGURACJA GULPA:
+1. Node JS
+2. npm install -g gulp-cli
+3.npm init
+4. npm install --save-dev gulp
+5.gulpfile.js
+6.npm install gulp-sass --save-dev
+7.npm install browser-sync gulp --save-dev
+8.
+var gulp = require("gulp"),
+	sass = require("gulp-sass"),
+	browserSync = require("browser-sync");
+
+	gulp.task("css", function(){
+		gulp.src("style.scss")
+		.pipe(sass())
+		.pipe(gulp.dest("css"))
+		.pipe(browserSync.stream());
+	});
+
+	gulp.task("server", function(){
+		browserSync.init({
+			server: "../cutpsd/"
+		});
+	});
+
+	gulp.task("watch", function(){
+		gulp.watch("*scss", ["css"]);
+		gulp.watch("*.html").on('change', browserSync.reload);
+	});
+
+	gulp.task("default", ["css", "server", "watch"]);

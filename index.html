@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ciecie Psd</title>
+	<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+	 <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,400,700&amp;subset=latin-ext" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
+   <script>
+     jQuery(function($){
+      $.scrollTo(0);
+      $('#link1').click(function() {$.scrollTo($('#goHome'), 500)});
+      $('#link2').click(function() {$.scrollTo($('#goAbout'), 500)});
+      $('#link3').click(function() {$.scrollTo($('#goServices'), 500)});
+      $('#link4').click(function() {$.scrollTo($('#goGallery'), 500)});
+      $('#link5').click(function() {$.scrollTo($('#goBlog'), 500)});
+      $('#link6').click(function() {$.scrollTo($('#goContact'), 500)});
+     }
+      );
+     $(document).ready(function(){
+         $('#nav-icon4').click(function(){
+             var nav = document.getElementById("changeHamb");
+             $(this).toggleClass('open');
+             console.log(document.getElementsByClassName("headwrap__main-menu"));
+             nav.classList.toggle("headwrap__main-menu2");
+             nav.classList.toggle("headwrap__main-menu");
+         });
+     });
+     function openModal() {
+         document.getElementById('myModal').style.display = "block";
+     }
+
+     function closeModal() {
+         document.getElementById('myModal').style.display = "none";
+     }
+
+     var slideIndex = 1;
+     showSlides(slideIndex);
+
+     function plusSlides(n) {
+         showSlides(slideIndex += n);
+     }
+
+     function currentSlide(n) {
+         showSlides(slideIndex = n);
+     }
+
+     function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("demo");
+         var captionText = document.getElementById("caption");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+         captionText.innerHTML = dots[slideIndex-1].alt;
+     }
+
+   </script>
+</head>
+<body>
+  <header id="goHome">
+	  <div class="headwrap__tophead">
+		  <div class="headwrap__logo"><p>Cahee</p></div>
+		  <nav id="changeHamb" class="headwrap__main-menu">
+			  <ul class="headwrap__row">
+				  <li class="headwrap__item">
+					  <a href="#" class="headwrap__link" id="link1">HOME</a>
+				  </li>
+				  <li class="headwrap__item">
+					  <a href="#" class="headwrap__link" id="link2">ABOUT</a>
+				  </li>
+				  <li class="headwrap__item">
+					  <a href="#" class="headwrap__link" id="link3">SERVICES</a>
+				  </li>
+				  <li class="headwrap__item">
+					  <a href="#" class="headwrap__link" id="link4">GALLERY</a>
+				  </li>
+				  <li class="headwrap__item">
+					  <a href="#" class="headwrap__link" id="link5">BLOG</a>
+				  </li>
+				  <li class="headwrap__item">
+					  <a href="#" class="headwrap__link" id="link6">CONTACT</a>
+				  </li>
+			  </ul>
+		  </nav>
+		  <div id="nav-icon4">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+		  </div>
+	  </div>
+  	<div class="headwrap">
+	  	<div class="headwrap__fresh">
+	  		<h2 class="headwrap__title">Fresh Life</h2>
+	  		<p class="headwrap__para">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+	  		<button class="headwrap__button">GET FREE NOW</button>
+	  	</div>
+	  	<div class="headwrap__scroll"><img src="img/scroll.png" alt="scroll"></div>
+  	</div>	
+  </header>
+  <div class="content">
+	  <div class="aboutUsWrapper">
+		<div class="aboutUs" id="goAbout">
+			<img class="aboutUs__img" src="img/about.png" alt="cup">
+			<div class="aboutUs__info">
+				<h2 class="aboutUs__title">About Us</h2>
+				<p class="aboutUs__para">Abore Cahee magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+				</p>
+				<p class="aboutUs__para">
+					Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+					doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+				</p>
+			</div>
+		</div>
+	  </div>
+	  <div style="clear: both"></div>
+	  <div class="servicesWrapper">
+		<div class="services" id="goServices">
+			<div class="services__bttns">
+				<ul class="services__row">
+					<li class="services__item">
+						<button class="services__button">
+							<img class="services__btnImg" src="img/buttons/icon1.png">
+							<div class="services__btnText">Online Shopping</div>
+						</button>
+					</li>
+					<li class="services__item">
+						<button class="services__button">
+							<img class="services__btnImg" src="img/buttons/icon2.png">
+							<div class="services__btnText">Quality Product</div>
+						</button>
+					</li>
+					<li class="services__item">
+						<button class="services__button">
+							<img class="services__btnImg" src="img/buttons/icon3.png">
+							<div class="services__btnText">Domestic & International Delivery </div>
+						</button>
+					</li>
+					<li class="services__item">
+						<button class="services__button">
+							<img class="services__btnImg" src="img/buttons/icon4.png">
+							<div class="services__btnText">Well Organized </div>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="services__ourServices">
+				<h2 class="services__title">Our Services</h2>
+			</div>
+		</div>
+	  </div>
+	  <div style="clear: both"></div>
+	  <div class="galleryWrapper">
+		<div class="gallery" id="goGallery">
+			<div class="gallery__galleryAbout">
+				<h2 class="gallery__title">Gallery</h2>
+				<p class="gallery__para">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="gallery__photos">
+				<div class="gallery__topgallery">
+					<img class="gallery__galleryImg gallery__img1" onclick="openModal();currentSlide(1)" alt="Trolltunga, Norway" src="img/gallery/img1.png">
+					<div class="gallery__vert">
+						<img class="gallery__galleryImg gallery__img2" onclick="openModal();currentSlide(2)" id="topimg" src="img/gallery/img2.png">
+						<img class="gallery__galleryImg gallery__img2" onclick="openModal();currentSlide(3)" src="img/gallery/img3.png">
+					</div>
+				</div>
+				<div class="gallery__botgallery">
+					<img class="gallery__galleryImg gallery__img3" onclick="openModal();currentSlide(4)" id="botgallery1" src="img/gallery/img4.png">
+					<img class="gallery__galleryImg gallery__img3" onclick="openModal();currentSlide(5)" id="botgallery2" src="img/gallery/img5.png">
+				</div>
+			</div>
+			<div style="clear: both"></div>
+			<div class="gallery__buttonGallery">
+				<button class="gallery__button">View More</button>
+			</div>
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 5</div>
+						<img src="img/gallery/img1.png" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 5</div>
+						<img src="img/gallery/img2.png" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 5</div>
+						<img src="img/gallery/img3.png" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">4 / 5</div>
+						<img src="img/gallery/img4.png" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">5 / 5</div>
+						<img src="img/gallery/img5.png" style="width:100%">
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+			</div>
+			</div>
+
+
+	  </div>
+	  <div class="subscribeWrapper">
+		<div class="subscribe" >
+			<div class="subscribe__head">
+				<h2 class="subscribe__title">Subscribe To Us</h2>
+				<p class="subscribe__para">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				<div class="subscribe__sub">
+					<input class="subscribe__input" type="email" name="email" placeholder="Your email adress...">
+					<button class="subscribe__btn">SUBSCRIBE</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div style="clear: both"></div>
+	  <div class="blogWrapper">
+		<div class="blog" id="goBlog">
+			<div class="blog__blogheader">
+				<h2 class="blog__title">Blog</h2>
+				<p class="blog__para">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+			</div>
+			<div class="blog__blogContent">
+				<div class="blog__blogInfo">
+					<div class="blog__discOuter1">
+
+						<div class="blog__discInner">
+							<div class="blog__dayBlog">20</div>
+							<div class="blog__monthBlog">Nov</div>
+						</div>
+						<div class="blog__bttmText">
+							<span class="blog__botText">Green Smoothies: Too Much of a Good Thing?</span>
+							<p class="blog__botPara">By Auskteez - 2 hours ago</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="blog__blogInfo">
+					<div class="blog__discOuter2">
+
+						<div class="blog__discInner">
+							<div class="blog__dayBlog">14</div>
+							<div class="blog__monthBlog">Nov</div>
+						</div>
+						<div class="blog__bttmText">
+							<span class="blog__botText">Growing Food and a “Thirst” for Innovation</span>
+							<p class="blog__botPara">By Auskteez - 3 hours ago</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="blog__blogInfo">
+					<div class="blog__discOuter3">
+
+						<div class="blog__discInner">
+							<div class="blog__dayBlog">10</div>
+							<div class="blog__monthBlog">Nov</div>
+						</div>
+						<div class="blog__bttmText">
+							<span class="blog__botText">Pesticides & Food: What You Need to Know</span>
+							<p class="blog__botPara">By Auskteez - 4 hours ago</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+			<div class="blog__buttonBlog"><button class="blog__btn">VIEW MORE</button></div>
+		</div>
+	  </div>
+	  <div class="footerWrapper">
+		<footer class="footer" id="goContact">
+			<div class="footer__footerHeader">
+				<h2 class="footer__header">Contact</h2>
+				<p class="footer__para">For new projects, ideas, business or anything
+	you'd like to discuss, contact with me!</p>
+			</div>
+			<div class="footer__contact">
+				<div class="footer__form">
+					<ul class="footer__list">
+						<li class="footer__item"><input class="footer__input" type="text" name="name" placeholder="Your Name..."></li>
+						<li class="footer__item"><input class="footer__input" type="text" name="email" placeholder="Your email..."></li>
+						<li class="footer__item"><input class="footer__input" type="text" name="phone" placeholder="Your Phone number..."></li>
+						<li class="footer__item"><input class="footer__input" id="input4" type="text" name="massage" placeholder="Your Massage..."> </li>
+					</ul>
+					<button class="footer__btn">SEND</button>
+				</div>
+				<div class="footer__contact">
+					<h3 class="footer__contactTitle">ADRESS</h3>
+					<p class="footer__contactPara">123 City name, Street, City, Country</p>
+					<h3 class="footer__contactTitle">EMAIL</h3>
+					<p class="footer__contactPara">cahee@domain.com</p>
+					<h3 class="footer__contactTitle">PHONE</h3>
+					<p class="footer__contactPara">+012 345 6789</p>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</footer>
+	  </div>
+	  <div class="footer2Wrapper">
+		  <footer>
+			  <div class="footerBot">
+				  <div id="footer1">© 2015 Company. All right reserved.</div>
+				  <div id="footer2">Made with <span class="footerBot__span">love</span> by Auskteez</div>
+				  <div id="footer3">Cahee</div>
+			  </div>
+		  </footer>
+	  </div>
+  </div>
+</body>
+</html>
