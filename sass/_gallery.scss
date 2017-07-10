@@ -22,20 +22,25 @@
     padding: 100px 0 30px 0;
     font-size: 90px;
     font-weight: bold;
+    @media (max-width: $xs) {
+      font-size: 50px;
+    }
   }
   @at-root #{&}__para {
     margin: 0 auto;
     width: 580px;
     font-size: 17px;
+    line-height: 30px;
     padding-bottom: 30px;
     @media (max-width: $m) {
-      display: none;
-
+      font-size: 12px;
+      line-height: 18px;
+      width: 100%;
     }
   }
   @at-root #{&}__topgallery {
     float: left;
-    padding-bottom: 30px;
+    padding-bottom: 1.5%;
   }
   @at-root #{&}__vert {
     width: 31.6%;
@@ -49,6 +54,7 @@
 
   @at-root #{&}__botgallery {
     float: left;
+    width: 100%;
   }
   #botgallery2{
     float: right;

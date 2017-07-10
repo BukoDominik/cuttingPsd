@@ -2,20 +2,38 @@
   overflow: hidden;
   width: 78%;
   margin: 0 auto;
-  @at-root #{&}__bttns {
-    padding: 160px 0 0 100px;
-    width: 400px;
-    float: left;
-    padding-bottom: 150px;
+  @at-root #{&}__smallHeader{
+    display: none;
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
     @media (max-width: $l) {
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+    }
+    @media (max-width: $m) {
+      font-size: 50px;
+    }
+    @media (max-width: $xs) {
+      font-size: 40px;
+    }
+  }
+  @at-root #{&}__bttns {
+    padding: 160px 0 150px 100px;
+    width: 38%;
+    float: left;
+    @media (max-width: $l) {
+      width: 400px;
       margin: 0 auto;
       float: none;
       padding: 20px 0 20px 0;
     }
-    @media (max-width: $s) {
-      width: 300px;
+    @media (max-width: $m) {
+      width: 200px;
     }
   }
+
   @at-root #{&}__item {
     padding: 20px 0 0 0;
   }
@@ -23,7 +41,7 @@
 
     background-color: #ffffff;
     border: hidden;
-    width: 400px;
+    width: 100%;
     height: 100px;
     font-weight: bold;
     font-size: 20px;
@@ -31,27 +49,26 @@
       cursor: pointer;
       box-shadow: 2px 2px 20px black;
     }
-    @media (max-width: $s) {
-      width: 300px;
+    @media (max-width: $m) {
+      width: 200px;
+      font-size: 16px;
+      height: 60px;
     }
   }
   @at-root #{&}__btnText {
     text-align: center;
-    width: 240px;
-    padding-left: 30px;
+    width: 60%;
+    padding-left: 8%;
     padding-top: 10px;
-    @media (max-width: $s) {
+    @media (max-width: $m) {
       width: auto;
       padding-left: 0px;
-      padding-top: 0px;
+      padding-top: 6px;
     }
   }
   @at-root #{&}__btnImg {
     float: right;
     padding-right: 20px;
-    @media (max-width: $s) {
-      display: none;
-    }
   }
   @at-root #{&}__ourServices {
     overflow: visible;
@@ -61,7 +78,8 @@
     background-repeat: no-repeat;
     margin-top: 100px;
     float: right;
-    width: 39%;
+    width: 37%;
+    min-width: 360px;
     height: 527px;
     @media (max-width: $l) {
       display: none}

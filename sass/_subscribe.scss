@@ -5,16 +5,20 @@
     font-size: 40px;
     font-weight: bold;
     padding: 145px 0 35px ;
-    @media (max-width: $m) {
+    @media (max-width: $l) {
       padding-top: 20px;
+      text-align: center;
     }
   }
   @at-root #{&}__para{
     max-width: 540px;
+    display: block;
     font-size: 17px;
+    line-height: 28px;
     padding-bottom: 35px;
-    @media (max-width: $m) {
-      display: none;
+    @media (max-width: $l) {
+      text-align: center;
+      margin: 0 auto;
     }
   }
   @at-root #{&}__input{
@@ -22,10 +26,13 @@
     font-weight: 100;
     width: 570px;
     height: 55px;
-    @media (max-width: $m) {
+    @media (max-width: $l) {
       display: block;
       margin: 0 auto;
       width: 350px;
+    }
+    @media (max-width: $xs) {
+      width: 200px;
     }
   }
   @at-root #{&}__btn{
@@ -40,15 +47,15 @@
       cursor: pointer;
       box-shadow: 2px 2px 10px #abc65b;
     }
-    @media (max-width: $m) {
+    @media (max-width: $l) {
       display: block;
       margin: 0 auto;
     }
   }
   @at-root #{&}__sub{
     padding-bottom: 160px;
-    @media (max-width: $m) {
-      padding: 0 0 0 10px;
+    @media (max-width: $l) {
+      padding: 0 0 20px 10px;
     }
   }
 }
