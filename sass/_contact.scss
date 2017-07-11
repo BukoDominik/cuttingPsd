@@ -1,0 +1,93 @@
+.contact {
+  width: 80%;
+  margin: 0 auto;
+  &__main-header {
+    text-align: center;
+  }
+
+  &__header {
+    @include section-title(450%, $fontSizeOnL);
+    padding: 100px 0 50px ;
+    @media (max-width: $l) {
+      padding: 30px 0 30px ;
+    }
+  }
+
+  &__para {
+    margin: 0 auto;
+    max-width: 370px;
+    @include section-para($paraFontSize);
+    padding: 0 0 50px ;
+  }
+
+  &__form {
+    float: left;
+    width: 400px;
+    padding-right: 170px;
+    padding-bottom: 55px;
+    @media (max-width: $l) {
+      float: none;
+      padding-right: 0px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    @media (max-width: $m) {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    padding-bottom: 15px;
+  }
+
+  &__input {
+    background-color: #77dbdc;
+    opacity: 0.5;
+    width: 500px;
+    height: 50px;
+    border: hidden;
+    font-family: Raleway;
+    font-size: 15px;
+    &:hover {
+      background-color: #00c4c4;
+      opacity: 1;
+      border-left: 2px solid #355b82;
+    }
+    @media (max-width: $m) {
+      width: 100%;
+    }
+  }
+
+  &__list li:nth-child(4) input  {
+    height: 250px;
+  }
+
+  &__btn {
+    @include section-button(#3477ac, $smallerBtnWidth, $smallerBtnHeight);
+    font-size: 20px;
+    font-family: Raleway;
+    font-weight: 100;
+    @media (max-width: $l) {
+      width: 500px;
+    }
+    @media (max-width: $m) {
+      width: 100%;
+    }
+  }
+
+  &__contact-title {
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  &__contact-para {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__contact{
+    margin: 0 auto;
+    text-align: center;
+  }
+}

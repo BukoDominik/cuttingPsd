@@ -1,8 +1,8 @@
-.aboutUs {
-  overflow: hidden;
-  width: 78%;
-  margin: 0 auto;
-  @at-root #{&}__img {
+@import "variables";
+@import "mixins";
+.about-us {
+  @include section-center($sectionWidth);
+  &__img {
     padding: 2.1% 0;
     float:left;
     width: 50%;
@@ -11,9 +11,9 @@
       float: none;
       margin: 0 auto;
     }
-
   }
-  @at-root #{&}__info {
+
+  &__info {
     padding: 25% 0 20px 0;
     color: white;
     float: right;
@@ -27,35 +27,16 @@
       margin: 0;
       width: 100%;
     }
-
   }
-  @at-root #{&}__title {
-    font-size: 450%;
-    font-weight: bold;
+
+  &__title {
+    @include section-title(450%, $fontSizeOnL);
     white-space: nowrap;
     padding-bottom: 10px;
-    @media (max-width: $l) {
-      font-size: 45px;
-    }
-    @media (max-width: $m) {
-      font-size: 30px;
-      text-align: center;
-    }
   }
-  @at-root #{&}__para {
-    font-size: 100%;
-    font-weight: 100;
-    line-height: 150%;
-    padding-bottom: 10px;
-    @media (max-width: $l) {
-      font-size: 14px;
-      font-weight: 100;
-    }
-    @media (max-width: $m) {
-      width: 100%;
-      padding-right: 0;
-      margin-right: 0;
-      text-align: justify;
-    }
+
+  &__para {
+    @include section-para($paraFontSize);
+    padding-bottom: 20px;
   }
 }

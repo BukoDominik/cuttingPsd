@@ -1,25 +1,21 @@
 .services {
-  overflow: hidden;
-  width: 78%;
-  margin: 0 auto;
-  @at-root #{&}__smallHeader{
+  padding-bottom: 10px;
+  @include section-center($sectionWidth);
+  &__smallHeader{
     display: none;
-    font-size: 90px;
-    font-weight: bold;
+    @include section-title($contentTitleFontSize, $fontSizeOnL);
     color: white;
     @media (max-width: $l) {
-      margin-top: 20px;
+      margin-top: 30px;
       display: block;
       text-align: center;
     }
-    @media (max-width: $m) {
-      font-size: 50px;
-    }
-    @media (max-width: $xs) {
+    @media (max-width: $s) {
       font-size: 40px;
     }
   }
-  @at-root #{&}__bttns {
+
+  &__bttns {
     padding: 160px 0 150px 100px;
     width: 38%;
     float: left;
@@ -30,15 +26,15 @@
       padding: 20px 0 20px 0;
     }
     @media (max-width: $m) {
-      width: 200px;
+      width: $buttonServiceMediumWidth;
     }
   }
 
-  @at-root #{&}__item {
+  &__item {
     padding: 20px 0 0 0;
   }
-  @at-root #{&}__button {
 
+  &__button {
     background-color: #ffffff;
     border: hidden;
     width: 100%;
@@ -50,46 +46,52 @@
       box-shadow: 2px 2px 20px black;
     }
     @media (max-width: $m) {
-      width: 200px;
+      width: $buttonServiceMediumWidth;
       font-size: 16px;
       height: 60px;
     }
   }
-  @at-root #{&}__btnText {
+
+  &__btnText {
     text-align: center;
     width: 60%;
     padding-left: 8%;
-    padding-top: 10px;
+    margin-top: 5px;
     @media (max-width: $m) {
       width: auto;
+      font-size: 14px;
       padding-left: 0px;
       padding-top: 6px;
     }
   }
-  @at-root #{&}__btnImg {
+
+  &__btnImg {
     float: right;
     padding-right: 20px;
+    @media (max-width: $m) {
+      padding-right: 10px;
+    }
   }
-  @at-root #{&}__ourServices {
+
+  &__our-services {
     overflow: visible;
     text-align: center;
     background: url("../img/tomato.png");
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 100px;
     float: right;
     width: 37%;
     min-width: 360px;
     height: 527px;
     @media (max-width: $l) {
-      display: none}
+      display: none
+    }
   }
-  @at-root #{&}__title {
+
+  &__title {
+    @include section-title($contentTitleFontSize, $fontSizeOnL);
     margin-top: 170px;
-    font-size: 90px;
-    font-weight: bold;
     color: white;
     float: right;
   }
-
 }

@@ -1,110 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ciecie Psd</title>
+	<title>Cięcie PSD</title>
 	<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="jquery.scrollTo.min.js"></script>
-	 <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="js/script.js"></script>
+	 <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,300,400,700&amp;subset=latin-ext" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
    <script>
-     jQuery(function($){
-      $.scrollTo(0);
-      $('#link1').click(function() {$.scrollTo($('#goHome'), 500)});
-      $('#link2').click(function() {$.scrollTo($('#goAbout'), 500)});
-      $('#link3').click(function() {$.scrollTo($('#goServices'), 500)});
-      $('#link4').click(function() {$.scrollTo($('#goGallery'), 500)});
-      $('#link5').click(function() {$.scrollTo($('#goBlog'), 500)});
-      $('#link6').click(function() {$.scrollTo($('#goContact'), 500)});
-     }
-      );
-     $(document).ready(function(){
-         $('#nav-icon4').click(function(){
-             var nav = document.getElementById("changeHamb");
-             $(this).toggleClass('open');
-             console.log(document.getElementsByClassName("headwrap__main-menu"));
-             nav.classList.toggle("headwrap__main-menu2");
-             nav.classList.toggle("headwrap__main-menu");
-         });
-     });
-     function openModal() {
-         document.getElementById('myModal').style.display = "block";
-     }
-
-     function closeModal() {
-         document.getElementById('myModal').style.display = "none";
-     }
-
-     var slideIndex = 1;
-     showSlides(slideIndex);
-
-     function plusSlides(n) {
-         showSlides(slideIndex += n);
-     }
-
-     function currentSlide(n) {
-         showSlides(slideIndex = n);
-     }
-
-     function showSlides(n) {
-         var i;
-         var slides = document.getElementsByClassName("mySlides");
-         var dots = document.getElementsByClassName("demo");
-         var captionText = document.getElementById("caption");
-         if (n > slides.length) {slideIndex = 1}
-         if (n < 1) {slideIndex = slides.length}
-         for (i = 0; i < slides.length; i++) {
-             slides[i].style.display = "none";
-         }
-         for (i = 0; i < dots.length; i++) {
-             dots[i].className = dots[i].className.replace(" active", "");
-         }
-         slides[slideIndex-1].style.display = "block";
-         dots[slideIndex-1].className += " active";
-         captionText.innerHTML = dots[slideIndex-1].alt;
-     }
-
    </script>
 </head>
 <body>
-  <header id="goHome">
-	  <div class="headwrap__hambwrap">
-		  <div class="headwrap__tophead">
-			  <div class="headwrap__logo"><p>Cahee</p></div>
-			  <div id="nav-icon4">
+  <header>
+	  <div class="top-menu">
+		  <div class="top-menu__top-head">
+			  <div class="top-menu__logo"><p>Cahee</p></div>
+			  <div class="top-menu__hamb-icon">
 				  <span></span>
 				  <span></span>
 				  <span></span>
 			  </div>
-			  <div class="headwrap__clearMenu"></div>
-			  <nav id="changeHamb" class="headwrap__main-menu">
-				  <ul class="headwrap__row">
-					  <li class="headwrap__item">
-						  <a href="#" class="headwrap__link" id="link1">HOME</a>
+			  <div class="top-menu__clear-menu"></div>
+			  <nav id="changeHamb" class="top-menu__main-menu">
+				  <ul class="top-menu__row">
+					  <li class="top-menu__item">
+						  <a href="#" class="top-menu__link" id="1">HOME</a>
 					  </li>
-					  <li class="headwrap__item">
-						  <a href="#" class="headwrap__link" id="link2">ABOUT</a>
+					  <li class="top-menu__item">
+						  <a href="#" class="top-menu__link" id="2">ABOUT</a>
 					  </li>
-					  <li class="headwrap__item">
-						  <a href="#" class="headwrap__link" id="link3">SERVICES</a>
+					  <li class="top-menu__item">
+						  <a href="#" class="top-menu__link" id="3">SERVICES</a>
 					  </li>
-					  <li class="headwrap__item">
-						  <a href="#" class="headwrap__link" id="link4">GALLERY</a>
+					  <li class="top-menu__item">
+						  <a href="#" class="top-menu__link" id="4">GALLERY</a>
 					  </li>
-					  <li class="headwrap__item">
-						  <a href="#" class="headwrap__link" id="link5">BLOG</a>
+					  <li class="top-menu__item">
+						  <a href="#" class="top-menu__link" id="5">BLOG</a>
 					  </li>
-					  <li class="headwrap__item">
-						  <a href="#" class="headwrap__link" id="link6">CONTACT</a>
+					  <li class="top-menu__item">
+						  <a href="#" class="top-menu__link" id="6">CONTACT</a>
 					  </li>
 				  </ul>
 			  </nav>
 
 		  </div>
 	  </div>
-  	<div class="headwrap">
+  	<div class="headwrap" id="go1">
 	  	<div class="headwrap__fresh">
 	  		<h2 class="headwrap__title">Fresh Life</h2>
 	  		<p class="headwrap__para">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
@@ -116,16 +60,16 @@
   <main>
 	  <div class="content">
 		  <section>
-		  <div class="aboutUsWrapper">
-			<div class="aboutUs" id="goAbout">
-				<img class="aboutUs__img" src="img/about.png" alt="cup">
-				<div class="aboutUs__info">
-					<h2 class="aboutUs__title">About Us</h2>
-					<p class="aboutUs__para">Abore Cahee magna aliqua. Ut enim ad minim veniam,
+		  <div class="about-wrapper">
+			<div class="about-us" id="go2">
+				<img class="about-us__img" src="img/about.png" alt="cup">
+				<div class="about-us__info">
+					<h2 class="about-us__title">About Us</h2>
+					<p class="about-us__para">Abore Cahee magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
 					</p>
-					<p class="aboutUs__para">
+					<p class="about-us__para">
 						Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
 						doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
 					</p>
@@ -135,38 +79,38 @@
 		  <div style="clear: both"></div>
 		  </section>
 		  <section>
-		  <div class="servicesWrapper">
-			<div class="services" id="goServices">
+		  <div class="services-wrapper">
+			<div class="services" id="go3">
 				<div><h2 class="services__smallHeader">Our Services</h2></div>
 				<div class="services__bttns">
 					<ul class="services__row">
 						<li class="services__item">
 							<button class="services__button">
 								<img class="services__btnImg" src="img/buttons/icon1.png">
-								<div class="services__btnText">Online Shopping</div>
+								<div class="services__btnText"><p>Online Shopping</p></div>
 							</button>
 						</li>
 						<li class="services__item">
 							<button class="services__button">
 								<img class="services__btnImg" src="img/buttons/icon2.png">
-								<div class="services__btnText">Quality Product</div>
+								<div class="services__btnText"><p>Quality Product</p></div>
 							</button>
 						</li>
 						<li class="services__item">
 							<button class="services__button">
 								<img class="services__btnImg" src="img/buttons/icon3.png">
-								<div class="services__btnText">Domestic & International Delivery </div>
+								<div class="services__btnText"><p>Domestic & International Delivery</p> </div>
 							</button>
 						</li>
 						<li class="services__item">
 							<button class="services__button">
 								<img class="services__btnImg" src="img/buttons/icon4.png">
-								<div class="services__btnText">Well Organized </div>
+								<div class="services__btnText"><p>Well Organized</p> </div>
 							</button>
 						</li>
 					</ul>
 				</div>
-				<div class="services__ourServices">
+				<div class="services__our-services">
 					<h2 class="services__title">Our Services</h2>
 				</div>
 			</div>
@@ -174,54 +118,54 @@
 		  <div style="clear: both"></div>
 		  </section>
 		  <section>
-		  <div class="galleryWrapper">
-			<div class="gallery" id="goGallery">
-				<div class="gallery__galleryAbout">
+		  <div class="gallery-wrapper">
+			<div class="gallery" id="go4">
+				<div class="gallery__gallery-about">
 					<h2 class="gallery__title">Gallery</h2>
 					<p class="gallery__para">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 				<div class="gallery__photos">
-					<div class="gallery__topgallery">
-						<img class="gallery__galleryImg gallery__img1" onclick="openModal();currentSlide(1)" alt="Trolltunga, Norway" src="img/gallery/img1.png">
+					<div class="gallery__top-gallery">
+						<img class="gallery__gallery-img gallery__img-top" onclick="openModal();currentSlide(1)" alt="Trolltunga, Norway" src="img/gallery/img1.png">
 						<div class="gallery__vert">
-							<img class="gallery__galleryImg gallery__img2" onclick="openModal();currentSlide(2)" id="topimg" src="img/gallery/img2.png">
-							<img class="gallery__galleryImg gallery__img2" onclick="openModal();currentSlide(3)" src="img/gallery/img3.png">
+							<img class="gallery__gallery-img gallery__img-vert" onclick="openModal();currentSlide(2)" src="img/gallery/img2.png">
+							<img class="gallery__gallery-img gallery__img-vert" onclick="openModal();currentSlide(3)" src="img/gallery/img3.png">
 						</div>
 					</div>
 					<div class="gallery__botgallery">
-						<img class="gallery__galleryImg gallery__img3" onclick="openModal();currentSlide(4)" id="botgallery1" src="img/gallery/img4.png">
-						<img class="gallery__galleryImg gallery__img3" onclick="openModal();currentSlide(5)" id="botgallery2" src="img/gallery/img5.png">
+						<img class="gallery__gallery-img gallery__img-bot" onclick="openModal();currentSlide(4)" src="img/gallery/img4.png">
+						<img class="gallery__gallery-img gallery__img-bot" onclick="openModal();currentSlide(5)" src="img/gallery/img5.png">
 					</div>
 				</div>
 				<div style="clear: both"></div>
-				<div class="gallery__buttonGallery">
+				<div class="gallery__button-gallery">
 					<button class="gallery__button">View More</button>
 				</div>
 				<div id="myModal" class="modal">
-					<span class="close cursor" onclick="closeModal()">&times;</span>
-					<div class="modal-content">
+					<span class="modal__close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal__content">
 
-						<div class="mySlides">
-							<div class="numbertext">1 / 5</div>
+						<div class="modal__my-slides">
+							<div class="modal__numbertext">1 / 5</div>
 							<img src="img/gallery/img1.png" style="width:100%">
 						</div>
 
-						<div class="mySlides">
-							<div class="numbertext">2 / 5</div>
+						<div class="modal__my-slides">
+							<div class="modal__numbertext">2 / 5</div>
 							<img src="img/gallery/img2.png" style="width:100%">
 						</div>
 
-						<div class="mySlides">
-							<div class="numbertext">3 / 5</div>
+						<div class="modal__my-slides">
+							<div class="modal__numbertext">3 / 5</div>
 							<img src="img/gallery/img3.png" style="width:100%">
 						</div>
 
-						<div class="mySlides">
-							<div class="numbertext">4 / 5</div>
+						<div class="modal__my-slides">
+							<div class="modal__numbertext">4 / 5</div>
 							<img src="img/gallery/img4.png" style="width:100%">
 						</div>
-						<div class="mySlides">
-							<div class="numbertext">5 / 5</div>
+						<div class="modal__my-slides">
+							<div class="modal__numbertext">5 / 5</div>
 							<img src="img/gallery/img5.png" style="width:100%">
 						</div>
 
@@ -230,12 +174,10 @@
 					</div>
 				</div>
 				</div>
-
-
 		  </div>
 		  </section>
 		  <section>
-		  <div class="subscribeWrapper">
+		  <div class="subscribe-wrapper">
 			<div class="subscribe" >
 				<div class="subscribe__head">
 					<h2 class="subscribe__title">Subscribe To Us</h2>
@@ -250,97 +192,97 @@
 		  <div style="clear: both"></div>
 		  </section>
 		  <section>
-		  <div class="blogWrapper">
-			<div class="blog" id="goBlog">
-				<div class="blog__blogheader">
+		  <div class="blog-wrapper">
+			<div class="blog" id="go5">
+				<div class="blog__header">
 					<h2 class="blog__title">Blog</h2>
 					<p class="blog__para">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
 				</div>
-				<div class="blog__blogContent">
-					<div class="blog__blogInfo">
-						<div class="blog__discOuter1">
+				<div class="blog__content">
+					<div class="blog__info">
+						<div class="blog__disc-outer1">
 
-							<div class="blog__discInner">
-								<div class="blog__dayBlog">20</div>
-								<div class="blog__monthBlog">Nov</div>
+							<div class="blog__disc-inner">
+								<div class="blog__day-blog"><p>20</p></div>
+								<div class="blog__month-blog"><p>Nov</p></div>
 							</div>
-							<div class="blog__bttmText">
-								<span class="blog__botText">Green Smoothies: Too Much of a Good Thing?</span>
-								<p class="blog__botPara">By Auskteez - 2 hours ago</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="blog__blogInfo">
-						<div class="blog__discOuter2">
-
-							<div class="blog__discInner">
-								<div class="blog__dayBlog">14</div>
-								<div class="blog__monthBlog">Nov</div>
-							</div>
-							<div class="blog__bttmText">
-								<span class="blog__botText">Growing Food and a “Thirst” for Innovation</span>
-								<p class="blog__botPara">By Auskteez - 3 hours ago</p>
+							<div class="blog__bttm-text">
+								<span class="blog__bot-text">Green Smoothies: Too Much of a Good Thing?</span>
+								<p class="blog__bot-para">By Auskteez - 2 hours ago</p>
 							</div>
 
 						</div>
 					</div>
-					<div class="blog__blogInfo">
-						<div class="blog__discOuter3">
+					<div class="blog__info">
+						<div class="blog__disc-outer2">
 
-							<div class="blog__discInner">
-								<div class="blog__dayBlog">10</div>
-								<div class="blog__monthBlog">Nov</div>
+							<div class="blog__disc-inner">
+								<div class="blog__day-blog"><p>14</p></div>
+								<div class="blog__month-blog"><p>Nov</p></div>
 							</div>
-							<div class="blog__bttmText">
-								<span class="blog__botText">Pesticides & Food: What You Need to Know</span>
-								<p class="blog__botPara">By Auskteez - 4 hours ago</p>
+							<div class="blog__bttm-text">
+								<span class="blog__bot-text">Growing Food and a “Thirst” for Innovation</span>
+								<p class="blog__bot-para">By Auskteez - 3 hours ago</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="blog__info">
+						<div class="blog__disc-outer3">
+
+							<div class="blog__disc-inner">
+								<div class="blog__day-blog"><p>10</p></div>
+								<div class="blog__month-blog"><p>Nov</p></div>
+							</div>
+							<div class="blog__bttm-text">
+								<span class="blog__bot-text">Pesticides & Food: What You Need to Know</span>
+								<p class="blog__bot-para">By Auskteez - 4 hours ago</p>
 							</div>
 
 						</div>
 					</div>
 				</div>
 				<div style="clear: both"></div>
-				<div class="blog__buttonBlog"><button class="blog__btn">VIEW MORE</button></div>
+				<div class="blog__button-blog"><button class="blog__btn">VIEW MORE</button></div>
 			</div>
 		  </div>
 		  </section>
-		  <div class="footerWrapper">
-			<footer class="footer" id="goContact">
-				<div class="footer__footerHeader">
-					<h2 class="footer__header">Contact</h2>
-					<p class="footer__para">For new projects, ideas, business or anything
+		  <div class="contact-wrapper">
+			<div class="contact" id="go6">
+				<div class="contact__main-header">
+					<h2 class="contact__header">Contact</h2>
+					<p class="contact__para">For new projects, ideas, business or anything
 		you'd like to discuss, contact with me!</p>
 				</div>
-				<div class="footer__contact">
-					<div class="footer__form">
-						<ul class="footer__list">
-							<li class="footer__item"><input class="footer__input" type="text" name="name" placeholder="Your Name..."></li>
-							<li class="footer__item"><input class="footer__input" type="text" name="email" placeholder="Your email..."></li>
-							<li class="footer__item"><input class="footer__input" type="text" name="phone" placeholder="Your Phone number..."></li>
-							<li class="footer__item"><input class="footer__input" id="input4" type="text" name="massage" placeholder="Your Massage..."> </li>
+				<div class="contact__contact">
+					<div class="contact__form">
+						<ul class="contact__list">
+							<li class="contact__item"><input class="contact__input" type="text" name="name" placeholder="Your Name..."></li>
+							<li class="contact__item"><input class="contact__input" type="text" name="email" placeholder="Your email..."></li>
+							<li class="contact__item"><input class="contact__input" type="text" name="phone" placeholder="Your Phone number..."></li>
+							<li class="contact__item"><input class="contact__input" type="text" name="massage" placeholder="Your Massage..."> </li>
 						</ul>
-						<button class="footer__btn">SEND</button>
+						<button class="contact__btn">SEND</button>
 					</div>
-					<div class="footer__contact">
-						<h3 class="footer__contactTitle">ADRESS</h3>
-						<p class="footer__contactPara">123 City name, Street, City, Country</p>
-						<h3 class="footer__contactTitle">EMAIL</h3>
-						<p class="footer__contactPara">cahee@domain.com</p>
-						<h3 class="footer__contactTitle">PHONE</h3>
-						<p class="footer__contactPara">+012 345 6789</p>
+					<div class="contact__contact">
+						<h3 class="contact__contact-title">ADRESS</h3>
+						<p class="contact__contact-para">123 City name, Street, City, Country</p>
+						<h3 class="contact__contact-title">EMAIL</h3>
+						<p class="contact__contact-para">cahee@domain.com</p>
+						<h3 class="contact__contact-title">PHONE</h3>
+						<p class="contact__contact-para">+012 345 6789</p>
 					</div>
 				</div>
 				<div style="clear: both"></div>
-			</footer>
+			</div>
 		  </div>
 
-		  <div class="footer2Wrapper">
+		  <div class="footer-wrapper">
 			  <footer>
-				  <div class="footerBot">
-					  <div id="footer1">© 2015 Company. All right reserved.</div>
-					  <div id="footer2">Made with <span class="footerBot__span">love</span> by Auskteez</div>
-					  <div id="footer3">Cahee</div>
+				  <div class="footer-bot">
+					  <div class="footer-bot__left"><p>© 2015 Company. All right reserved.</p></div>
+					  <div class="footer-bot__right"><p>Made with <span class="footer-bot__span">love</span> by Auskteez</p></div>
+					  <div class="footer-bot__middle"><p>Cahee</p></div>
 				  </div>
 			  </footer>
 		  </div>

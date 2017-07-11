@@ -1,79 +1,111 @@
 .gallery{
-  width: 80%;
-  margin: 0 auto;
-  @at-root #{&}__img1{
+  @include section-center($sectionWidth);
+  &__img-top{
     width: 65.811%;
-  }
-  @at-root #{&}__img2{
-    width: 100%;
-  }
-  @at-root #{&}__img3{
-    width: 48.7%;
+    @media (max-width: $s) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
 
-  @at-root #{&}__galleryImg:hover {
+  &__img-vert{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__img-bot{
+    width: 48.7%;
+    @media (max-width: $s) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__gallery-img:hover {
     cursor: pointer;
     box-shadow: 2px 2px 10px black;
   }
-  @at-root #{&}__galleryAbout {
+
+  &__gallery-about {
     text-align: center;
   }
-  @at-root #{&}__title {
+
+  &__title {
+    @include section-title($contentTitleFontSize, $fontSizeOnL);
     padding: 100px 0 30px 0;
-    font-size: 90px;
-    font-weight: bold;
-    @media (max-width: $xs) {
-      font-size: 50px;
+    @media (max-width: $l) {
+      padding: 20px 0 20px 0;
     }
+
   }
-  @at-root #{&}__para {
+
+  &__para {
     margin: 0 auto;
     width: 580px;
-    font-size: 17px;
-    line-height: 30px;
+    @include section-para($paraFontSize);
     padding-bottom: 30px;
     @media (max-width: $m) {
+      text-align: center;
       font-size: 12px;
       line-height: 18px;
       width: 100%;
     }
   }
-  @at-root #{&}__topgallery {
+
+  &__top-gallery {
     float: left;
     padding-bottom: 1.5%;
+    @media (max-width: $s) {
+      float: none;
+      width: 100%;
+    }
+    @media (max-width: $s) {
+      padding: 0;
+    }
   }
-  @at-root #{&}__vert {
+
+  &__vert {
     width: 31.6%;
     float: right;
     padding-left: 2.5%;
-  }
-  #topimg{
-    margin-bottom: 7.3%;
+    img:first-child{
+      margin-bottom: 7.3%;
+      @media (max-width: $s) {
+        margin: 0 0 0 0;
+      }
+    }
+    @media (max-width: $s) {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
   }
 
 
-  @at-root #{&}__botgallery {
+  &__botgallery {
     float: left;
     width: 100%;
-  }
-  #botgallery2{
-    float: right;
-    margin-left: 2.5%;
+    img:last-child{
+      float: right;
+      margin-left: 2.5%;
+    }
+    @media (max-width: $s) {
+      float: none;
+    }
   }
 
-  @at-root #{&}__buttonGallery {
+  &__button-gallery {
     padding: 50px 0 120px 0;
+    @media (max-width: $l) {
+      padding: 50px 0 30px 0;
+    }
   }
-  @at-root #{&}__button {
+
+  &__button {
     margin: 0 auto;
     display: block;
-    width: 200px;
-    height: 60px;
-    font-weight: 100;
-    font-size: 20px;
-    color: white;
-    background-color: #5585a2;
-    border: hidden;
+    @include section-button(#5585a2, $biggerBtnWidth, $biggerBtnHeight);
     &:hover{
       cursor: pointer;
       box-shadow: 2px 2px 10px #5585a2;
