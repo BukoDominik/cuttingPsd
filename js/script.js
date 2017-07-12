@@ -24,6 +24,8 @@ $(document).ready(function(){
 
 });
 
+// JSowy Modal
+
 function openModal() {
     document.getElementById('myModal').style.display = "block";
 }

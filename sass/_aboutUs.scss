@@ -1,42 +1,29 @@
 @import "variables";
 @import "mixins";
-.about-us {
+.about{
   @include section-center($sectionWidth);
-  &__img {
-    padding: 2.1% 0;
-    float:left;
-    width: 50%;
-    @media (max-width: $l) {
-      display: block;
-      float: none;
-      margin: 0 auto;
-    }
-  }
 
-  &__info {
-    padding: 25% 0 20px 0;
+  .row{
+    padding: 35px 0 30px 0;
     color: white;
-    float: right;
-    width: 42%;
+  }
+  &__img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  &__title{
+    @include section-title($contentTitleFontSize, $fontSizeOnL);
+    padding-bottom: 15px;
+    padding-top: 145px;
     @media (max-width: $l) {
-      padding: 20px 0 20px 0;
-      float: none;
-      margin: 0 auto;
-    }
-    @media (max-width: $m) {
-      margin: 0;
-      width: 100%;
+      padding-top: 0px;
     }
   }
-
-  &__title {
-    @include section-title(450%, $fontSizeOnL);
-    white-space: nowrap;
-    padding-bottom: 10px;
-  }
-
-  &__para {
+  &__para{
     @include section-para($paraFontSize);
-    padding-bottom: 20px;
+  }
+  p:first-of-type{
+    padding-bottom: 30px;
   }
 }

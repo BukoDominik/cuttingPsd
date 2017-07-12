@@ -1,10 +1,10 @@
 
 .footer-bot{
+  @include section-center($sectionWidth);
   text-align: center;
   font-family: Raleway;
   font-size: 16px;
   padding: 40px 0 30px 0;
-  background-color: #262626;
   color: #b9b9b9;
   &__left{
     float: left;

@@ -22,7 +22,30 @@
 @mixin box-shadow($shadows...){
   box-shadow: $shadows;
 }
+@mixin service-button(){
+  &__button{
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
+  }
+  &__btn-img{
+    margin: 30px 20px 30px 0;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+  &__btn-descr{
+    margin: 0 auto;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 300px;
+  }
+}
 @mixin section-button($color, $btnWidth, $btnHeight) {
     $bsColor: darken($color, 15%);
     background-color: $color;
@@ -42,10 +65,14 @@
   width: $width;
   margin: 0 auto;
   overflow: hidden;
+  @media (max-width: $s) {
+    width: 100%;
+  }
 }
 
 @mixin top-menu($bgColor, $elemsWidth){
   .top-menu {
+    z-index: 1000;
     padding: 25px 0 25px 0;
     width: 100%;
     position: fixed;
@@ -97,9 +124,14 @@
 
     &__link {
       color: black;
+      font-size: 16px;
       text-decoration: none;
       &:hover {
         border-top: 3px solid #ff6033;
+      }
+      &:focus{
+        text-decoration: none;
+        outline: none;
       }
     }
     &__hamb-icon {

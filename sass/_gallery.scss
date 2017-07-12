@@ -1,107 +1,175 @@
+@import "mixins";
+@import "variables";
+//.gallery{
+//  @include section-center($sectionWidth);
+//  &__img-top{
+//    width: 65.811%;
+//    @media (max-width: $s) {
+//      width: 100%;
+//      margin-bottom: 10px;
+//    }
+//  }
+//
+//  &__img-vert{
+//    width: 100%;
+//    margin-bottom: 10px;
+//  }
+//
+//  &__img-bot{
+//    width: 48.7%;
+//    @media (max-width: $s) {
+//      width: 100%;
+//      margin-bottom: 10px;
+//    }
+//  }
+//
+//  &__gallery-img:hover {
+//    cursor: pointer;
+//    box-shadow: 2px 2px 10px black;
+//  }
+//
+//  &__gallery-about {
+//    text-align: center;
+//  }
+//
+//  &__title {
+//    @include section-title($contentTitleFontSize, $fontSizeOnL);
+//    padding: 100px 0 30px 0;
+//    @media (max-width: $l) {
+//      padding: 20px 0 20px 0;
+//    }
+//
+//  }
+//
+//  &__para {
+//    margin: 0 auto;
+//    width: 580px;
+//    @include section-para($paraFontSize);
+//    padding-bottom: 30px;
+//    @media (max-width: $m) {
+//      text-align: center;
+//      font-size: 12px;
+//      line-height: 18px;
+//      width: 100%;
+//    }
+//  }
+//
+//  &__top-gallery {
+//    float: left;
+//    padding-bottom: 1.5%;
+//    @media (max-width: $s) {
+//      float: none;
+//      width: 100%;
+//    }
+//    @media (max-width: $s) {
+//      padding: 0;
+//    }
+//  }
+//
+//  &__vert {
+//    width: 31.6%;
+//    float: right;
+//    padding-left: 0.2%;
+//    height: inherit;
+//    img:first-child{
+//      margin-bottom: 7.3%;
+//      @media (max-width: $s) {
+//        margin: 0 0 3% 0;
+//      }
+//    }
+//    @media (max-width: $s) {
+//      float: none;
+//      width: 100%;
+//      padding: 0;
+//      margin: 0;
+//    }
+//  }
+//
+//
+//  &__botgallery {
+//    float: left;
+//    width: 100%;
+//    img:last-child{
+//      float: right;
+//      margin-left: 2.5%;
+//    }
+//    @media (max-width: $s) {
+//      float: none;
+//    }
+//  }
+//
+//  &__button-gallery {
+//    padding: 50px 0 120px 0;
+//    @media (max-width: $l) {
+//      padding: 50px 0 30px 0;
+//    }
+//  }
+//
+//  &__button {
+//    margin: 0 auto;
+//    display: block;
+//    @include section-button(#5585a2, $biggerBtnWidth, $biggerBtnHeight);
+//    &:hover{
+//      cursor: pointer;
+//      box-shadow: 2px 2px 10px #5585a2;
+//    }
+//  }
+//}
+
 .gallery{
   @include section-center($sectionWidth);
-  &__img-top{
-    width: 65.811%;
-    @media (max-width: $s) {
-      width: 100%;
-      margin-bottom: 10px;
-    }
+  padding-top: 100px;
+  @media (max-width: $m) {
+    padding: 30px 15px 0 15px;
   }
-
-  &__img-vert{
+  img {
     width: 100%;
-    margin-bottom: 10px;
+    height: auto;
+    display: block;
   }
-
-  &__img-bot{
-    width: 48.7%;
-    @media (max-width: $s) {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-
-  &__gallery-img:hover {
+  img:hover {
     cursor: pointer;
     box-shadow: 2px 2px 10px black;
   }
-
-  &__gallery-about {
-    text-align: center;
-  }
-
-  &__title {
-    @include section-title($contentTitleFontSize, $fontSizeOnL);
-    padding: 100px 0 30px 0;
-    @media (max-width: $l) {
-      padding: 20px 0 20px 0;
-    }
-
-  }
-
-  &__para {
-    margin: 0 auto;
-    width: 580px;
-    @include section-para($paraFontSize);
-    padding-bottom: 30px;
+  &__img{
     @media (max-width: $m) {
-      text-align: center;
-      font-size: 12px;
-      line-height: 18px;
-      width: 100%;
+      margin: 0 0 30px 0;
+      padding: 0px;
     }
   }
-
-  &__top-gallery {
-    float: left;
-    padding-bottom: 1.5%;
-    @media (max-width: $s) {
-      float: none;
-      width: 100%;
-    }
-    @media (max-width: $s) {
-      padding: 0;
+  &__row--middle{
+    margin: 50px 0 30px;
+    @media (max-width: $m) {
+      margin: 30px 0 0 0;
     }
   }
-
-  &__vert {
-    width: 31.6%;
-    float: right;
-    padding-left: 2.5%;
-    img:first-child{
-      margin-bottom: 7.3%;
-      @media (max-width: $s) {
-        margin: 0 0 0 0;
-      }
-    }
-    @media (max-width: $s) {
-      float: none;
-      width: 100%;
-      padding: 0;
-      margin: 0;
+  &__row--last{
+    margin-bottom: 50px;
+    padding: 0 15px 0 15px;
+  }
+  &__img--middle{
+    margin-bottom: 30px;
+    @media (max-width: $m) {
+      margin: 30px 0 30px 0;
     }
   }
-
-
-  &__botgallery {
-    float: left;
-    width: 100%;
-    img:last-child{
-      float: right;
-      margin-left: 2.5%;
-    }
-    @media (max-width: $s) {
-      float: none;
-    }
+  &__title{
+    @include section-title($contentTitleFontSize, $fontSizeOnL);
+    text-align: center;
+    margin-bottom: 30px;
   }
-
+  &__para{
+    @include section-para($paraFontSize);
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+  }
   &__button-gallery {
-    padding: 50px 0 120px 0;
+    padding: 0 0 120px 0;
     @media (max-width: $l) {
-      padding: 50px 0 30px 0;
+      padding: 0 0 30px 0;
     }
   }
-
   &__button {
     margin: 0 auto;
     display: block;
