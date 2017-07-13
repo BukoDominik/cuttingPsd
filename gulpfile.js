@@ -3,6 +3,7 @@ var gulp = require("gulp"),
 	autoPrefixer = require("gulp-autoprefixer"),
 	cleanCss = require("gulp-clean-css"),
 	useref = require("gulp-useref"),
+	uglify = require("gulp-uglify"),
 	browserSync = require("browser-sync");
 
 	gulp.task("css", function(){
@@ -27,10 +28,12 @@ var gulp = require("gulp"),
 		gulp.watch("*.html").on('change', browserSync.reload);
 	});
 
-	gulp.task("mini", function(){
-		gulp.src("css/style.css")
-			.pipe(cleanCss())
-			.pipe(gulp.dest("css/css"));
+	gulp.task("uglyJS", function(){
+		gulp.src("js/script.js")
+			.pipe(uglify())
+			.pipe(gulp.dest("js/js"));
 	});
 
-	gulp.task("default", ["css", "server", "watch"]);
+
+
+	gulp.task("default", ["css", "uglyJS", "server", "watch"]);
