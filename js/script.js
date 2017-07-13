@@ -22,45 +22,25 @@ $(document).ready(function(){
         }, 2000);
     });
 
+    $('.gallery__photo').on("click", function(){
+        $(".light-box__background").animate({"opacity": ".90"}, 500);
+        $(".light-box").animate({"opacity": "1.0"}, 500);
+        $(".light-box__background, .light-box").css("display", "block");
+        var photo = $(this).attr("src");
+        $(".light-box__photo").attr({src: photo});
+    });
+    $(".light-box__close, .light-box__background").on("click", function(){
+        closeBox();
+    });
+    function closeBox() {
+        $(".light-box__background, .light-box").animate({"opacity": "0"}, 500, function(){
+            $(".light-box__background, .light-box").css("display", "none");
+        })
+
+    }
 });
 
-// JSowy Modal
 
-function openModal() {
-    document.getElementById('myModal').style.display = "block";
-}
-
-function closeModal() {
-    document.getElementById('myModal').style.display = "none";
-}
-
-var slideIndex = 1;
-
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("modal__my-slides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-
-}
 
 
 

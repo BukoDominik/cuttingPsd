@@ -3,9 +3,11 @@
 <head>
 	<title>Cięcie PSD</title>
 	<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
 	 <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,300,400,700&amp;subset=latin-ext" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
@@ -45,7 +47,6 @@
 					  </li>
 				  </ul>
 			  </nav>
-
 		  </div>
 	  </div>
   	<div class="headwrap" id="go1">
@@ -59,233 +60,199 @@
   </header>
   <main>
 	  <div class="content">
-		  <section>
-		  <div class="about-wrapper">
-			<div class="about-us" id="go2">
-				<img class="about-us__img" src="img/about.png" alt="cup">
-				<div class="about-us__info">
-					<h2 class="about-us__title">About Us</h2>
-					<p class="about-us__para">Abore Cahee magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-					</p>
-					<p class="about-us__para">
-						Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-						doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
-					</p>
-				</div>
-			</div>
-		  </div>
-		  <div style="clear: both"></div>
-		  </section>
-		  <section>
-		  <div class="services-wrapper">
-			<div class="services" id="go3">
-				<div><h2 class="services__smallHeader">Our Services</h2></div>
-				<div class="services__bttns">
-					<ul class="services__row">
-						<li class="services__item">
-							<button class="services__button">
-								<img class="services__btnImg" src="img/buttons/icon1.png">
-								<div class="services__btnText"><p>Online Shopping</p></div>
-							</button>
-						</li>
-						<li class="services__item">
-							<button class="services__button">
-								<img class="services__btnImg" src="img/buttons/icon2.png">
-								<div class="services__btnText"><p>Quality Product</p></div>
-							</button>
-						</li>
-						<li class="services__item">
-							<button class="services__button">
-								<img class="services__btnImg" src="img/buttons/icon3.png">
-								<div class="services__btnText"><p>Domestic & International Delivery</p> </div>
-							</button>
-						</li>
-						<li class="services__item">
-							<button class="services__button">
-								<img class="services__btnImg" src="img/buttons/icon4.png">
-								<div class="services__btnText"><p>Well Organized</p> </div>
-							</button>
-						</li>
-					</ul>
-				</div>
-				<div class="services__our-services">
-					<h2 class="services__title">Our Services</h2>
-				</div>
-			</div>
-		  </div>
-		  <div style="clear: both"></div>
-		  </section>
-		  <section>
-		  <div class="gallery-wrapper">
-			<div class="gallery" id="go4">
-				<div class="gallery__gallery-about">
-					<h2 class="gallery__title">Gallery</h2>
-					<p class="gallery__para">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-				<div class="gallery__photos">
-					<div class="gallery__top-gallery">
-						<img class="gallery__gallery-img gallery__img-top" onclick="openModal();currentSlide(1)" alt="Trolltunga, Norway" src="img/gallery/img1.png">
-						<div class="gallery__vert">
-							<img class="gallery__gallery-img gallery__img-vert" onclick="openModal();currentSlide(2)" src="img/gallery/img2.png">
-							<img class="gallery__gallery-img gallery__img-vert" onclick="openModal();currentSlide(3)" src="img/gallery/img3.png">
-						</div>
-					</div>
-					<div class="gallery__botgallery">
-						<img class="gallery__gallery-img gallery__img-bot" onclick="openModal();currentSlide(4)" src="img/gallery/img4.png">
-						<img class="gallery__gallery-img gallery__img-bot" onclick="openModal();currentSlide(5)" src="img/gallery/img5.png">
-					</div>
-				</div>
-				<div style="clear: both"></div>
-				<div class="gallery__button-gallery">
-					<button class="gallery__button">View More</button>
-				</div>
-				<div id="myModal" class="modal">
-					<span class="modal__close cursor" onclick="closeModal()">&times;</span>
-					<div class="modal__content">
-
-						<div class="modal__my-slides">
-							<div class="modal__numbertext">1 / 5</div>
-							<img src="img/gallery/img1.png" style="width:100%">
-						</div>
-
-						<div class="modal__my-slides">
-							<div class="modal__numbertext">2 / 5</div>
-							<img src="img/gallery/img2.png" style="width:100%">
-						</div>
-
-						<div class="modal__my-slides">
-							<div class="modal__numbertext">3 / 5</div>
-							<img src="img/gallery/img3.png" style="width:100%">
-						</div>
-
-						<div class="modal__my-slides">
-							<div class="modal__numbertext">4 / 5</div>
-							<img src="img/gallery/img4.png" style="width:100%">
-						</div>
-						<div class="modal__my-slides">
-							<div class="modal__numbertext">5 / 5</div>
-							<img src="img/gallery/img5.png" style="width:100%">
-						</div>
-
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<a class="next" onclick="plusSlides(1)">&#10095;</a>
-					</div>
-				</div>
-				</div>
-		  </div>
-		  </section>
-		  <section>
-		  <div class="subscribe-wrapper">
-			<div class="subscribe" >
-				<div class="subscribe__head">
-					<h2 class="subscribe__title">Subscribe To Us</h2>
-					<p class="subscribe__para">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<div class="subscribe__sub">
-						<input class="subscribe__input" type="email" name="email" placeholder="Your email adress...">
-						<button class="subscribe__btn">SUBSCRIBE</button>
-					</div>
-				</div>
-			</div>
-		  </div>
-		  <div style="clear: both"></div>
-		  </section>
-		  <section>
-		  <div class="blog-wrapper">
-			<div class="blog" id="go5">
-				<div class="blog__header">
-					<h2 class="blog__title">Blog</h2>
-					<p class="blog__para">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-				</div>
-				<div class="blog__content">
-					<div class="blog__info">
-						<div class="blog__disc-outer1">
-
-							<div class="blog__disc-inner">
-								<div class="blog__day-blog"><p>20</p></div>
-								<div class="blog__month-blog"><p>Nov</p></div>
-							</div>
-							<div class="blog__bttm-text">
-								<span class="blog__bot-text">Green Smoothies: Too Much of a Good Thing?</span>
-								<p class="blog__bot-para">By Auskteez - 2 hours ago</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="blog__info">
-						<div class="blog__disc-outer2">
-
-							<div class="blog__disc-inner">
-								<div class="blog__day-blog"><p>14</p></div>
-								<div class="blog__month-blog"><p>Nov</p></div>
-							</div>
-							<div class="blog__bttm-text">
-								<span class="blog__bot-text">Growing Food and a “Thirst” for Innovation</span>
-								<p class="blog__bot-para">By Auskteez - 3 hours ago</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="blog__info">
-						<div class="blog__disc-outer3">
-
-							<div class="blog__disc-inner">
-								<div class="blog__day-blog"><p>10</p></div>
-								<div class="blog__month-blog"><p>Nov</p></div>
-							</div>
-							<div class="blog__bttm-text">
-								<span class="blog__bot-text">Pesticides & Food: What You Need to Know</span>
-								<p class="blog__bot-para">By Auskteez - 4 hours ago</p>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<div style="clear: both"></div>
-				<div class="blog__button-blog"><button class="blog__btn">VIEW MORE</button></div>
-			</div>
-		  </div>
-		  </section>
-		  <div class="contact-wrapper">
-			<div class="contact" id="go6">
-				<div class="contact__main-header">
-					<h2 class="contact__header">Contact</h2>
-					<p class="contact__para">For new projects, ideas, business or anything
-		you'd like to discuss, contact with me!</p>
-				</div>
-				<div class="contact__contact">
-					<div class="contact__form">
-						<ul class="contact__list">
-							<li class="contact__item"><input class="contact__input" type="text" name="name" placeholder="Your Name..."></li>
-							<li class="contact__item"><input class="contact__input" type="text" name="email" placeholder="Your email..."></li>
-							<li class="contact__item"><input class="contact__input" type="text" name="phone" placeholder="Your Phone number..."></li>
-							<li class="contact__item"><input class="contact__input" type="text" name="massage" placeholder="Your Massage..."> </li>
-						</ul>
-						<button class="contact__btn">SEND</button>
-					</div>
-					<div class="contact__contact">
-						<h3 class="contact__contact-title">ADRESS</h3>
-						<p class="contact__contact-para">123 City name, Street, City, Country</p>
-						<h3 class="contact__contact-title">EMAIL</h3>
-						<p class="contact__contact-para">cahee@domain.com</p>
-						<h3 class="contact__contact-title">PHONE</h3>
-						<p class="contact__contact-para">+012 345 6789</p>
-					</div>
-				</div>
-				<div style="clear: both"></div>
-			</div>
-		  </div>
-
-		  <div class="footer-wrapper">
-			  <footer>
-				  <div class="footer-bot">
-					  <div class="footer-bot__left"><p>© 2015 Company. All right reserved.</p></div>
-					  <div class="footer-bot__right"><p>Made with <span class="footer-bot__span">love</span> by Auskteez</p></div>
-					  <div class="footer-bot__middle"><p>Cahee</p></div>
+		  <section class="about-wrapper" id="go2">
+				  <div class="container about">
+					  <div class="row">
+						  <div class="col-md-7">
+							  <img class="about__img" src="img/about.png" alt="cup">
+						  </div>
+						  <div class="col-md-5">
+							  <h2 class="about__title">About Us</h2>
+							  <p class="about__para">Abore Cahee magna aliqua. Ut enim ad minim veniam,
+								  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+							  </p>
+							  <p class="about__para">
+								  Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+								  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+							  </p>
+						  </div>
+					  </div>
 				  </div>
-			  </footer>
-		  </div>
+		  </section>
+		  <section class="services-wrapper" id="go3">
+			  <div class="container services">
+				  <div class="row services__content">
+					  <div class="col-sm-12 hidden-md hidden-lg">
+						  <h2 class="services__smallHeader">Our Services</h2>
+					  </div>
+					  <div class="col-md-5 col-md-offset-1">
+						  <div class="row">
+							  <button class="services__button">
+								  <p class="services__btn-descr">Online Shopping</p>
+								  <img class="services__btn-img" src="img/buttons/icon1.png">
+							  </button>
+							  <button class="services__button">
+								  <p class="services__btn-descr">Quality Product</p>
+								  <img class="services__btn-img" src="img/buttons/icon2.png">
+							  </button>
+							  <button class="services__button">
+								  <p class="services__btn-descr">Domestic & International Delivery</p>
+								  <img class="services__btn-img" src="img/buttons/icon3.png">
+							  </button>
+							  <button class="services__button">
+								  <p class="services__btn-descr">Well Organized</p>
+								  <img class="services__btn-img" src="img/buttons/icon4.png">
+							  </button>
+						  </div>
+					  </div>
+					  <div class="col-md-6 hidden-sm hidden-xs">
+						  <div class="services__right">
+						  	<h2 class="services__title">Our Services</h2>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </section>
+		  <section class="gallery-wrapper" id="go4">
+				  <div class="container gallery">
+					  <div class="row">
+						  <div class="col-lg-12">
+							  <h2 class="gallery__title">Gallery</h2>
+							  <p class="gallery__para">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+								  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								  laboris nisi ut aliquip ex ea commodo consequat.
+							  </p>
+						  </div>
+					  </div>
+					  <div class="row gallery__row--middle">
+						  <div class="col-sm-8 gallery__img"><img class="gallery__photo" src="img/gallery/img1.png"></div>
+						  <div class="col-sm-4 gallery__img gallery__img--middle"><img class="gallery__photo"  src="img/gallery/img2.png"></div>
+						  <div class="col-sm-4 gallery__img"><img class="gallery__photo" src="img/gallery/img3.png"></div>
+					  </div>
+					  <div class="row gallery__row--last">
+						  <div class="col-sm-6 gallery__img"><img class="gallery__photo"  src="img/gallery/img4.png"></div>
+						  <div class="col-sm-6 gallery__img"><img class="gallery__photo"  src="img/gallery/img5.png"></div>
+					  </div>
+				  </div>
+				  <div class="gallery__button-gallery">
+					  <button class="gallery__button">View More</button>
+				  </div>
+				  <div class="light-box">
+					  <img class="light-box__photo" src="">
+					  <div class="light-box__close">X</div>
+				  </div>
+				  <div class="light-box__background"></div>
+		  </section>
+		  <section class="subscribe-wrapper">
+			  <div class="container subscribe">
+				  <div class="row">
+					  <div class="col-md-7">
+						  <h2 class="subscribe__title">Subscribe To Us</h2>
+					  </div>
+					  <div class="col-md-7">
+						  <p class="subscribe__para">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+						  </p>
+					  </div>
+					  <div class="subscribe__sub">
+						  <input type="email" name="email" placeholder="Your email adress..." class="subscribe__input">
+						  <button class="subscribe__btn">SUBSCRIBE</button>
+					  </div>
+				  </div>
+			  </div>
+		  </section>
+		  <section class="blog-wrapper" id="go5">
+			  <div class="container blog">
+					  <h2 class="blog__title">Blog</h2>
+					  <p class="blog__para">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+					  </p>
+				  <div class="row">
+					  <div class="md-col-4">
+						  <div class="blog__info">
+							  <div class="blog__disc-outer1">
+
+								  <div class="blog__disc-inner">
+									  <div class="blog__day-blog"><p>20</p></div>
+									  <div class="blog__month-blog"><p>Nov</p></div>
+								  </div>
+								  <div class="blog__bttm-text">
+									  <span class="blog__bot-text">Green Smoothies: Too Much of a Good Thing?</span>
+									  <p class="blog__bot-para">By Auskteez - 2 hours ago</p>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+					  <div class="md-col-4">
+						  <div class="blog__info blog__info--middle">
+							  <div class="blog__disc-outer2">
+
+								  <div class="blog__disc-inner">
+									  <div class="blog__day-blog"><p>14</p></div>
+									  <div class="blog__month-blog"><p>Nov</p></div>
+								  </div>
+								  <div class="blog__bttm-text">
+									  <span class="blog__bot-text">Growing Food and a “Thirst” for Innovation</span>
+									  <p class="blog__bot-para">By Auskteez - 3 hours ago</p>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+					  <div class="md-col-4">
+						  <div class="blog__info">
+							  <div class="blog__disc-outer3">
+
+								  <div class="blog__disc-inner">
+									  <div class="blog__day-blog"><p>10</p></div>
+									  <div class="blog__month-blog"><p>Nov</p></div>
+								  </div>
+								  <div class="blog__bttm-text">
+									  <span class="blog__bot-text">Pesticides & Food: What You Need to Know</span>
+									  <p class="blog__bot-para">By Auskteez - 4 hours ago</p>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="blog__button-blog"><button class="blog__btn">VIEW MORE</button></div>
+			  </div>
+		  </section>
+		  <section class="contact-wrapper" id="go6">
+			  <div class="container contact">
+				  <h2 class="contact__header">Contact</h2>
+				  <p class="contact__para">For new projects, ideas, business or anything
+					  you'd like to discuss, contact with me!</p>
+				  <div class="row contact__form">
+					  <div class="col-md-6">
+						  <ul class="contact__list">
+							  <li class="contact__item"><input class="contact__input" type="text" name="name" placeholder="Your Name..."></li>
+							  <li class="contact__item"><input class="contact__input" type="text" name="email" placeholder="Your email..."></li>
+							  <li class="contact__item"><input class="contact__input" type="text" name="phone" placeholder="Your Phone number..."></li>
+							  <li class="contact__item"><input class="contact__input" type="text" name="massage" placeholder="Your Massage..."> </li>
+						  </ul>
+						  <button class="contact__btn">SEND</button>
+					  </div>
+					  <div class="col-md-5 col-md-offset-1">
+						  <h3 class="contact__contact-title">ADRESS</h3>
+						  <p class="contact__contact-para">123 City name, Street, City, Country</p>
+						  <h3 class="contact__contact-title">EMAIL</h3>
+						  <p class="contact__contact-para">cahee@domain.com</p>
+						  <h3 class="contact__contact-title">PHONE</h3>
+						  <p class="contact__contact-para">+012 345 6789</p>
+					  </div>
+				  </div>
+			  </div>
+		  </section>
+		  <footer>
+			  <div class="footer-bot">
+				  <div class="footer-bot__left"><p>© 2015 Company. All right reserved.</p></div>
+				  <div class="footer-bot__right"><p>Made with <span class="footer-bot__span">love</span> by Auskteez</p></div>
+				  <div class="footer-bot__middle"><p>Cahee</p></div>
+			  </div>
+		  </footer>
 	  </div>
   </main>
 </body>

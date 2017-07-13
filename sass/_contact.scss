@@ -6,7 +6,8 @@
   }
 
   &__header {
-    @include section-title(450%, $fontSizeOnL);
+    @include section-title($contentTitleFontSize, $fontSizeOnL);
+    text-align: center;
     padding: 100px 0 50px ;
     @media (max-width: $l) {
       padding: 30px 0 30px ;
@@ -16,26 +17,16 @@
   &__para {
     margin: 0 auto;
     max-width: 370px;
+    text-align: center;
     @include section-para($paraFontSize);
+    font-weight: 400;
     padding: 0 0 50px ;
   }
-
-  &__form {
-    float: left;
-    width: 400px;
-    padding-right: 170px;
-    padding-bottom: 55px;
+  &__form{
     @media (max-width: $l) {
-      float: none;
-      padding-right: 0px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    @media (max-width: $m) {
-      width: 100%;
+      text-align: center;
     }
   }
-
   &__item {
     padding-bottom: 15px;
   }
@@ -43,7 +34,8 @@
   &__input {
     background-color: #77dbdc;
     opacity: 0.5;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 50px;
     border: hidden;
     font-family: Raleway;
@@ -65,8 +57,8 @@
   &__btn {
     @include section-button(#3477ac, $smallerBtnWidth, $smallerBtnHeight);
     font-size: 20px;
-    font-family: Raleway;
     font-weight: 100;
+    max-width: 500px;
     @media (max-width: $l) {
       width: 500px;
     }

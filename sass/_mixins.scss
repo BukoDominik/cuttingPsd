@@ -11,6 +11,7 @@
 };
 
 @mixin section-para($paragrafFontSize) {
+  font-family: Raleway;
   font-size: $paragrafFontSize;
   font-weight: 200;
   line-height: 28px;
