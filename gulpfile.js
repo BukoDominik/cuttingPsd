@@ -11,6 +11,7 @@ var gulp = require("gulp"),
 		.pipe(autoPrefixer({
             browsers: ["last 5 version", 'last 5 ff versions', 'IE 9',  'last 2 Chrome versions', 'last 5 Opera versions']
         }))
+		.pipe(cleanCss())
 		.pipe(gulp.dest("css"))
 		.pipe(browserSync.stream());
 	});
@@ -32,4 +33,4 @@ var gulp = require("gulp"),
 			.pipe(gulp.dest("css/css"));
 	});
 
-	gulp.task("default", ["css", "mini", "server", "watch"]);
+	gulp.task("default", ["css", "server", "watch"]);
